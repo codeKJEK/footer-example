@@ -1,6 +1,12 @@
 # footer-example
 HTML/CSS footer examples for a friend
 
+## Table Method
+
+**NEW** I am not sure if this works in the version of IE that you use but you can try this.  The Table heading and footer print on every page by default.  We can write out content out using tables or HTML (like I did in the example). The Table footer will print on every page but the last page won’t be at the bottom. But we can specify a size for the table footer (leave space at the bottom of the page) then use the position fixed approach to place the footer we want there.  Its always at the bottom of the page and the content never overlaps it.  Its nothing complicate just HTML and CSS.  I am just not sure that version of IE supports it.  More on this approach here: 
+
+https://medium.com/@Idan_Co/the-ultimate-print-html-template-with-header-footer-568f415f6d2a
+
 
 ## Absolute 
 
