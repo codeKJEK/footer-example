@@ -1,0 +1,26 @@
+/* Page Setup */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 0 40px;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.pagebreak {
+    margin-bottom: 100px;
+}
+
+/* What you need */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 40px;
+}
