@@ -1,0 +1,17 @@
+.footer, .footer-space {
+  height: 50px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer table {
+    width: 95%;
+}
+
+.right-align {
+    text-align: right;
+}

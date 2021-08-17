@@ -4,6 +4,14 @@ html, body {
     padding: 0;
 }
 
+body {
+    height: 10in;
+}
+
+html {
+    height: 10in;
+}
+
 .container {
     padding: 0 40px;
 }
