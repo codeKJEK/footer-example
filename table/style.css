@@ -1,17 +1,33 @@
+/* set the height for footer and footer space */
 .footer, .footer-space {
-  height: 50px;
+  height: 50px; /* adjust as needed */
+  
 }
 
+/* place the footer at the bottom of every page and make it 100% width */
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 
+/* table inside the footer container is set to 95% of the footers width */
 .footer table {
-    width: 95%;
+    width: 95%; /* adjust as needed */
 }
 
+/* text in the 2nd columns get aligned to the right */
 .right-align {
     text-align: right;
+}
+
+/* Set the width, height and color of the cover position it absolutly at the bottom of the first page to remove cover letter footer */
+.cover {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  top: 1000px; /* adjust as needed */
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
 }
