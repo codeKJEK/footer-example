@@ -1,0 +1,1380 @@
+<style>
+    * {font-family: arial !important; font-size: 11pt !important; }
+.subHead {font-family: arial !important; font-size: 12pt !important; font-weight: bold }
+.head    {font-family: arial !important; font-size: 12pt !important; font-weight: bold }
+.logo img { max-width: 380px !important; width: 380px !important; }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    margin: 0.5in 0.5in 0 0.5in;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+
+  #content-table {
+    width: 7.5in;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-spacing: 0;
+  }
+
+  #footer,
+  #footer-space {
+    height: 0.5in;
+  }
+
+  @media print {
+    #footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    #footer-cover {
+      position: absolute;
+      height: 0.5in;
+      width: 7.5in;
+      top: 10in;
+      left: 0;
+      background-color: #f2f2f2;
+      z-index: 1;
+    }
+  }
+
+  
+</style>
+<!-- Language=C# --><!--#INCLUDE FILE = "scripts\COVERSHEET_C.aspx"-->
+<!-- START content table -->
+<table id="content-table">
+  <!-- START table body -->
+  <tbody>
+    <tr>
+      <td>
+        <rawcodeblock contenteditable="false" style="background-color: yellow"
+          >&lt;%if(<datafield
+            contenteditable="false"
+            style="background-color: lightblue"
+            >&quot;LetterTo_name&quot;</datafield
+          >
+          != (<datafield
+            contenteditable="false"
+            style="background-color: lightblue"
+            >&quot;Member_firstname&quot;</datafield
+          >
+          + &quot; &quot; +<datafield
+            contenteditable="false"
+            style="background-color: lightblue"
+            >&quot;Member_lastname&quot;</datafield
+          >)){%&gt;</rawcodeblock
+        ><rawcodeblock contenteditable="false" style="background-color: yellow"
+          >&lt;!--#INCLUDE FILE=&quot;scripts\CMS DENIAL LETTER FAX
+          COVERSHEET_C.aspx&quot;--&gt;</rawcodeblock
+        ><rawcodeblock contenteditable="false" style="background-color: yellow"
+          >&lt;%}%&gt;</rawcodeblock
+        >
+        <div>
+          <rawcodeblock contenteditable="false" style="background-color: yellow"
+            >&lt;%<br />
+            string timeframe = &quot;&quot;;<br />
+            string service = &quot;&quot;;<br />
+            if(<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Parameter_svctype&quot;</datafield
+            >
+            == &quot;Part B drug&quot;){<br />
+            timeframe=&quot;7 calendar days&quot;;<br />
+            service=&quot;Part B drug&quot;;<br />
+            }<br />
+            else{<br />
+            timeframe=&quot;30 calendar days&quot;;<br />
+            service=&quot;medical services/items&quot;;<br />
+            }<br />
+            %&gt;</rawcodeblock
+          >
+        </div>
+        <table style="width: 100%">
+          <tbody>
+            <tr>
+              <td
+                class="logo"
+                style="width: 40%; vertical-align: top; text-align: left"
+              >
+                <rawcodeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >&lt;!--#INCLUDE
+                  FILE=&quot;scripts\Logo_C.aspx&quot;--&gt;</rawcodeblock
+                >
+              </td>
+              <td style="width: 10%"><br /></td>
+              <td style="width: 50%">
+                <div>
+                  <codeblock
+                    contenteditable="false"
+                    style="background-color: yellow"
+                    ><span
+                      style="
+                        font-size: 8pt !important;
+                        font-family: times new roman !important;
+                        color: #808080;
+                      "
+                      >=</span
+                    ><datafield
+                      contenteditable="false"
+                      style="background-color: lightblue"
+                      ><span
+                        style="
+                          font-size: 8pt !important;
+                          font-family: times new roman !important;
+                          color: #808080;
+                        "
+                        >&quot;HealthPlan_Addon4&quot;</span
+                      ></datafield
+                    ><span
+                      style="
+                        font-size: 8pt !important;
+                        font-family: times new roman !important;
+                        color: #808080;
+                      "
+                    ></span
+                  ></codeblock>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <b>Important:</b> This notice explains your right to appeal our
+          decision. Read this notice carefully. If you need help, you can call
+          one of the numbers listed toward the end under “Get help &amp; more
+          information.” You can also see Chapter 9 of the
+          <em>Member Handbook</em> for information about how to make an appeal.
+        </p>
+        <p class="head" style="text-align: center">
+          Notice of Denial of Medical Coverage
+        </p>
+        <hr color="#000000" style="margin-bottom: 0pt; padding-bottom: 0pt" />
+        <table style="width: 100%; border-collapse: collapse">
+          <tbody>
+            <tr>
+              <td style="width: 45%; vertical-align: top">
+                <b>Date:</b>
+                <rawcodeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >&lt;%=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;CurrentDate_long&quot;</datafield
+                  >%&gt;</rawcodeblock
+                >
+              </td>
+              <td>
+                <b>Member number:</b>
+                <rawcodeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >&lt;%=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;Member_id&quot;</datafield
+                  >%&gt;</rawcodeblock
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><br /></td>
+              <td><br /></td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top">
+                <b>Name:&nbsp;</b>&nbsp;<rawcodeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >&lt;%=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;Member_firstname&quot;</datafield
+                  >%&gt;</rawcodeblock
+                >
+                <rawcodeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >&lt;%=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;Member_lastname&quot;</datafield
+                  >%&gt;</rawcodeblock
+                ><br />
+                <div style="margin-left: 40pt">
+                  <rawcodeblock
+                    contenteditable="false"
+                    style="background-color: yellow"
+                    >&lt;%=<datafield
+                      contenteditable="false"
+                      style="background-color: lightblue"
+                      >&quot;Member_MAddress1&quot;</datafield
+                    >%&gt;</rawcodeblock
+                  >&nbsp;<rawcodeblock
+                    contenteditable="false"
+                    style="background-color: yellow"
+                    >&lt;%if(!String.IsNullOrEmpty(<datafield
+                      contenteditable="false"
+                      style="background-color: lightblue"
+                      >&quot;Member_MAddress2&quot;</datafield
+                    >)) {<br />
+                    Response.Write(&quot;&lt;br /&gt;&quot; +
+                    <datafield
+                      contenteditable="false"
+                      style="background-color: lightblue"
+                      >&quot;Member_MAddress2&quot;</datafield
+                    >);}<br />
+                    %&gt;</rawcodeblock
+                  ><br />
+                  <br />
+                  <rawcodeblock
+                    contenteditable="false"
+                    style="background-color: yellow"
+                    >&lt;%=<datafield
+                      contenteditable="false"
+                      style="background-color: lightblue"
+                      >&quot;Member_MCity&quot;</datafield
+                    >%&gt;</rawcodeblock
+                  >,
+                  <rawcodeblock
+                    contenteditable="false"
+                    style="background-color: yellow"
+                    >&lt;%=<datafield
+                      contenteditable="false"
+                      style="background-color: lightblue"
+                      >&quot;Member_MState&quot;</datafield
+                    >%&gt;</rawcodeblock
+                  >
+                  <rawcodeblock
+                    contenteditable="false"
+                    style="background-color: yellow"
+                    >&lt;%=<datafield
+                      contenteditable="false"
+                      style="background-color: lightblue"
+                      >&quot;Member_MZip&quot;</datafield
+                    >%&gt;</rawcodeblock
+                  >
+                </div>
+              </td>
+              <td style="vertical-align: top">
+                <b>Provider name:</b>
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;Auth_ReferredFrom&quot;</datafield
+                  ></codeblock
+                ><br />
+                <b>Date of Service:</b>&nbsp;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr color="#000000" />
+        <p>
+          <span class="subHead">Your request was denied</span><br />
+          <br />
+          We've denied the&nbsp;<codeblock
+            contenteditable="false"
+            style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Parameter_svctype&quot;</datafield
+            ></codeblock
+          >
+          listed below requested by you or your provider:
+        </p>
+        <p>
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Parameter_rqst_svc&quot;</datafield
+            ></codeblock
+          >
+        </p>
+        <p>
+          <span class="subHead">Why did we deny your request?</span><br />
+          <br />
+          We denied the
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Parameter_svctype&quot;</datafield
+            ></codeblock
+          >
+          listed above because:
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_DenialReason&quot;</datafield
+            ></codeblock
+          >
+        </p>
+        <p>
+          You should share a copy of this decision with your doctor so you and
+          your doctor can discuss next steps. If your doctor requested coverage
+          on your behalf, we have sent a copy of this decision to your doctor.
+        </p>
+        <p class="subHead">You have the right to appeal our decision</p>
+        <p>
+          You have the right to ask
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          to review our decision by asking us for a Level 1 Appeal (sometimes
+          called an “internal appeal” or “plan appeal”). In special cases, you
+          can also ask for an Independent Medical Review (IMR) without first
+          appealing to our plan. You cannot ask for an IMR if you have already
+          had a State Hearing on the same issue. If you get an IMR and you are
+          not satisfied with the result, you can still ask for a State Hearing.
+        </p>
+        <p>
+          Ask
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          for a Level 1 Appeal within
+          <b
+            ><codeblock contenteditable="false" style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_HMOAppealDays&quot;</datafield
+              ></codeblock
+            >
+            calendar days</b
+          >
+          of the date of this notice. We can give you more time if you have a
+          good reason for missing the deadline. See section titled “How to ask
+          for a Level 1 Appeal with
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >” for information on how to ask for a plan level appeal.
+        </p>
+        <div style="margin-top: 20px; page-break-after: always">
+          H3237_21_21609IDN_Approved_10162020
+        </div>
+        <div
+          style="
+            border-right: 1px solid;
+            padding-left: 15px;
+            margin-left: 30px;
+            border-left: 1px solid;
+          "
+        >
+          <b>How to keep your services while we review your case:</b> If we're
+          stopping or reducing a service, you can keep getting the service while
+          your case is being reviewed.
+          <span style="font-weight: bold"
+            >If you want the service to continue, you must ask for an
+            appeal&nbsp;within 10 calendar days</span
+          >
+          of the date of this notice or before the service is stopped or
+          reduced, whichever is later.
+        </div>
+        <p class="subHead">If you want someone else to act for you</p>
+        <p>
+          You can name a relative, friend, attorney, doctor, or someone else to
+          act as your representative. If you want someone else to act for you,
+          call us at:
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Phone&quot;</datafield
+            ></codeblock
+          >
+          (Los Angeles County)/<codeblock
+            contenteditable="false"
+            style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon5&quot;</datafield
+            ></codeblock
+          >
+          to learn how to name your representative. TTY users call
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_TTY_or_TTD&quot;</datafield
+            ></codeblock
+          >. Both you and the person you want to act for you must sign and date
+          a statement saying this is what you want. You’ll need to mail or fax
+          this statement to us. Keep a copy for your records.
+        </p>
+        <p class="subHead">
+          There are 2 kinds of Level 1 appeals with
+          <codeblock contenteditable="false" style="background-color: yellow"
+            ><span
+              style="
+                font-size: 11pt !important;
+                font-family: arial !important;
+                font-weight: bold;
+              "
+              >=</span
+            ><datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              ><span
+                style="
+                  font-size: 11pt !important;
+                  font-family: arial !important;
+                  font-weight: bold;
+                "
+                >&quot;HealthPlan_Addon1&quot;</span
+              ></datafield
+            ><span
+              style="
+                font-size: 11pt !important;
+                font-family: arial !important;
+                font-weight: bold;
+              "
+            ></span
+          ></codeblock>
+        </p>
+        <p>
+          <b>Standard Appeal</b> - We'll give you a written decision on a
+          standard appeal within
+          <b
+            ><rawcodeblock
+              contenteditable="false"
+              style="background-color: yellow"
+              >&lt;%=timeframe%&gt;</rawcodeblock
+            ></b
+          >
+          after we get your appeal. Our decision might take longer if you ask
+          for an extension, or if we need more information about your case.
+          We'll tell you if we're taking extra time and will explain why more
+          time is needed. If your appeal is for payment of a
+          <rawcodeblock contenteditable="false" style="background-color: yellow"
+            >&lt;%=service%&gt;</rawcodeblock
+          >
+          you've already received, we'll give you a written decision within
+          <b>60 calendar days</b>.
+        </p>
+        <p>
+          <b>Fast (Expedited) Appeal</b> - We'll give you a decision on a fast
+          appeal as quickly as your condition requires, and always within
+          <b>72 hours</b> after we get your appeal. You can ask for a fast
+          appeal if you or your doctor believe your health could be seriously
+          harmed by waiting for a decision on a standard appeal.
+        </p>
+        <p>
+          <b
+            >We'll automatically give you a fast appeal if a doctor asks for one
+            for you or if your doctor supports your request.</b
+          >
+          If you ask for a fast appeal without support from a doctor, we'll
+          decide if your request requires a fast appeal. If we don't give you a
+          fast appeal, we'll give you a decision within
+          <b
+            ><rawcodeblock
+              contenteditable="false"
+              style="background-color: yellow"
+              >&lt;%=timeframe%&gt;</rawcodeblock
+            ></b
+          >.
+        </p>
+        <p class="head">
+          How to ask for a Level 1 Appeals with
+          <codeblock contenteditable="false" style="background-color: yellow"
+            ><span
+              style="
+                font-size: 12pt !important;
+                font-family: arial !important;
+                font-weight: bold;
+              "
+              >=</span
+            ><datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              ><span
+                style="
+                  font-size: 12pt !important;
+                  font-family: arial !important;
+                  font-weight: bold;
+                "
+                >&quot;HealthPlan_Addon1&quot;</span
+              ></datafield
+            ><span
+              style="
+                font-size: 12pt !important;
+                font-family: arial !important;
+                font-weight: bold;
+              "
+            ></span
+          ></codeblock>
+        </p>
+        <p>
+          <span class="subHead">Step 1:</span> You, your representative, or your
+          provider must ask us for an appeal within
+          <b>60&nbsp;calendar days</b> of getting this notice.
+        </p>
+        <p>Your [written] request must include:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Address</li>
+          <li>Member number</li>
+          <li>Reasons for appealing</li>
+          <li>
+            Whether you want a standard or fast appeal (for a fast appeal,
+            explain why you need one).
+          </li>
+          <li>
+            Any evidence you want us to review, such as medical records,
+            doctors’ letters (such as a doctor’s supporting statement if you
+            request a fast appeal), or other information that explains why you
+            need the&nbsp;<codeblock
+              contenteditable="false"
+              style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;Parameter_svctype&quot;</datafield
+              ></codeblock
+            >. Call your doctor if you need this information.
+          </li>
+        </ul>
+        <p>
+          We recommend keeping a copy of everything you send us for your
+          records.
+        </p>
+        <p>
+          You can ask to see the medical records and other documents we used to
+          make our decision before or during the appeal. At no cost to you, you
+          can also ask for a copy of the guidelines we used to make our
+          decision.
+        </p>
+        <p>
+          <span class="subHead">Step 2:</span> Mail, fax, or deliver your appeal
+          or call us.
+        </p>
+        <table
+          style="width: 100%; border-collapse: collapse; table-layout: auto"
+        >
+          <tbody>
+            <tr>
+              <td style="width: 25%; vertical-align: top">
+                <b>For a Standard Appeal:</b>
+              </td>
+              <td style="vertical-align: top">
+                <b>Mailing Address:</b><br />
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Addon4&quot;</datafield
+                  ></codeblock
+                ><br />
+                Attn: Appeals &amp; Grievances Dept.<br />
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Address&quot;</datafield
+                  ></codeblock
+                ><br />
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_City&quot;</datafield
+                  ></codeblock
+                >,&nbsp;<codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_State&quot;</datafield
+                  ></codeblock
+                >&nbsp;<codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Zip&quot;</datafield
+                  ></codeblock
+                ><br />
+                <br />
+                <b>In Person Delivery Address:</b><br />
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Name&quot;</datafield
+                  ></codeblock
+                >
+                Community Solutions, Inc.<br />
+                Attn: Appeals &amp; Grievances Dept.<br />
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Address_EG&quot;</datafield
+                  ></codeblock
+                ><br />
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_City_EG&quot;</datafield
+                  ></codeblock
+                >,&nbsp;<codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_State_EG&quot;</datafield
+                  ></codeblock
+                >&nbsp;<codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Zip_EG&quot;</datafield
+                  ></codeblock
+                ><br />
+                <br />
+                <b>Phone:</b>
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Phone&quot;</datafield
+                  ></codeblock
+                >&nbsp;(Los Angeles County)/<codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Addon5&quot;</datafield
+                  ></codeblock
+                >
+                TTY Users Call:
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_TTY_or_TTD&quot;</datafield
+                  ></codeblock
+                ><br />
+                <b>Fax:</b>
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Fax&quot;</datafield
+                  ></codeblock
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          If you ask for a standard appeal by phone, we will repeat your
+          request&nbsp;back to you to be sure we have documented it correctly.
+          We will also send you a letter confirming what you told us. The letter
+          will tell you how to make any corrections.
+        </p>
+        <table style="width: 100%; border-collapse: collapse">
+          <tbody>
+            <tr>
+              <td style="width: 20%; vertical-align: top">
+                <b>For a Fast Appeal:</b>
+              </td>
+              <td>
+                Phone:
+                <rawcodeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >&lt;%=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Phone_EG&quot;</datafield
+                  >%&gt;</rawcodeblock
+                >
+                (Los Angeles County)/<codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Addon5&quot;</datafield
+                  ></codeblock
+                ><br />
+                TTY Users Call:
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_TTY_or_TTD_EG&quot;</datafield
+                  ></codeblock
+                ><br />
+                Fax:
+                <codeblock
+                  contenteditable="false"
+                  style="background-color: yellow"
+                  >=<datafield
+                    contenteditable="false"
+                    style="background-color: lightblue"
+                    >&quot;HealthPlan_Fax_EG&quot;</datafield
+                  ></codeblock
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="subHead">What happens next?</p>
+        <p>
+          If you ask for a Level 1&nbsp;Appeal and we continue to deny your
+          request for a service, we'll send you a written decision.
+        </p>
+        <p>
+          If the service was originally a Medicare service or a service covered
+          by both Medicare and Medi-Cal, we will automatically send your case to
+          an independent reviewer. If the independent reviewer denies your
+          request, the written decision will explain if you have additional
+          appeal rights.
+        </p>
+        <p>
+          If the service was a Medi-Cal service, you can ask for an
+          <b>Independent Medical Review (IMR)</b> or a <b>State Hearing</b>.
+          Your written decision will give you instructions on how to request the
+          next level of appeal. Information is also below.
+        </p>
+        <p class="head">How to ask for an Independent Medical Review (IMR)</p>
+        <p>
+          You can ask for an Independent Medical Review (IMR) for Medi-Cal
+          covered services and items from the California Department of Managed
+          Health Care (Department). You can ask for an IMR if you disagree with
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >'s Level 1 Appeal decision or if
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          Medicare-Medicaid Plan has not resolved your Level 1 Appeal after 30
+          days. In special cases, you can also ask for an Independent Medical
+          Review (IMR) without first appealing to our plan.
+        </p>
+        <p>
+          In most cases, you must file a Level 1 Appeal with
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          before requesting an IMR; however, you may be able to have an IMR
+          without appealing to
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          first if:
+        </p>
+        <ul>
+          <li style="margin-bottom: 15px">
+            Your problem is urgent and involves an immediate and serious threat
+            to your health.
+          </li>
+          <li style="margin-bottom: 15px">
+            <codeblock contenteditable="false" style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_Addon1&quot;</datafield
+              ></codeblock
+            >
+            denied a Medi-Cal service or treatment because it is experimental or
+            investigational.
+          </li>
+        </ul>
+        <p>
+          You cannot ask for an IMR if you have already had a State Hearing on
+          the same issue. If you get an IMR and you are not satisfied with the
+          result, you can still ask for a State Hearing.
+        </p>
+        <p>
+          <b>How to ask for an IMR.</b> Fill out the online Independent Medical
+          Review/Complaint Form available at
+          <u
+            ><a
+              href="http://www.dmhc.ca.gov/fileacomplaint/submitanindependentmedicalreviewcomplaintform.aspx"
+              >www.dmhc.ca.gov/fileacomplaint/submitanindependentmedicalreviewcomplaintform.aspx</a
+            ></u
+          >
+          or you can fill out the hard copy IMR application form that is
+          included with this notice and send it to:
+        </p>
+        <p style="margin-left: 50px">
+          Help Center<br />
+          Department of Managed Health Care<br />
+          980 Ninth Street, Suite 500<br />
+          Sacramento, CA 95814-2725<br />
+          FAX: 916-255-5241
+        </p>
+        <p>
+          If you choose to do so, you may attach copies of letters or other
+          documents about the service or item that was denied. If you do, send
+          copies of documents, not originals. The Department Help Center may not
+          be able to return all original documents.
+        </p>
+        <p>
+          You or your representative must ask for an IMR within
+          <b>6 months</b> after we send you a written decision. However, the
+          Department may extend the 6-month deadline for good reasons such as
+          you had a medical condition that prevented you from asking for the IMR
+          within 6 months or you did not get adequate notice of the IMR process.
+        </p>
+        <p>
+          Call the
+          <b
+            >California Department of Managed Health Care (DMHC) toll-free at
+            1-888-466-2219</b
+          >
+          for free help. The California Department of Managed Health Care is
+          responsible for regulating health care service plans. If you have a
+          grievance against your health plan, you should first telephone your
+          health plan at
+          <b
+            ><codeblock contenteditable="false" style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_Phone&quot;</datafield
+              ></codeblock
+            >
+            (Los Angeles County)/<codeblock
+              contenteditable="false"
+              style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_Addon5&quot;</datafield
+              ></codeblock
+            >, TTY:
+            <codeblock contenteditable="false" style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_TTY_or_TTD&quot;</datafield
+              ></codeblock
+            ></b
+          >
+          and use your health plan’s grievance process before contacting the
+          Department. Using this grievance procedure does not prohibit any
+          potential legal rights or remedies that may be available to you. If
+          you need help with a grievance involving an emergency, a grievance
+          that has not been satisfactorily resolved by your health plan, or a
+          grievance that has remained unresolved for more than 30 days, you may
+          call the Department for assistance. You may also be eligible for an
+          Independent Medical Review (IMR). If you are eligible for IMR, the IMR
+          process will provide an impartial review of medical decisions made by
+          a health plan related to the medical necessity of a proposed service
+          or treatment, coverage decisions for treatments that are experimental
+          or investigational in nature and payment disputes for emergency or
+          urgent medical services. The department also has a toll-free telephone
+          number <b>(1-888-466-2219)</b> and a TTY line
+          <b>(1-877-688-9891)</b> for the hearing and speech impaired. The
+          Department’s Internet Web site <b><u>www.dmhc.ca.gov</u></b> has
+          complaint forms, IMR application forms and instructions online.
+        </p>
+        <p class="subHead">What happens next?</p>
+        <p>
+          If you qualify for an IMR, the DMHC will review your case and send you
+          a letter within 7 calendar days telling you that you qualify for an
+          IMR. After your application and supporting documents are received from
+          your plan, the IMR decision will be made within 30 calendar days. You
+          should receive the IMR decision within 45 calendar days of the
+          submission of the completed application.
+        </p>
+        <p>
+          If your case is urgent and you qualify for an IMR, the DMHC will
+          review your case and send you a letter within 2 calendar days telling
+          you that you qualify for an IMR. After your application and supporting
+          documents are received from your plan, the IMR decision will be made
+          within 3 calendar days. You should receive the IMR decision within 7
+          calendar days of the submission of the completed application.
+        </p>
+        <p>
+          An IMR can take longer if the DMHC does not receive all of the medical
+          records needed from you or your treating doctor. If you are seeing a
+          doctor who is not in your health plan's network, it is important that
+          you get and send us your medical records from that doctor. Your health
+          plan is required to get copies of your medical records from doctors
+          who are in the network.
+        </p>
+        <p>
+          Doctors who are not part of
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          will review your case. The DMHC will send you a letter explaining the
+          decision. If the IMR decision is in your favor,
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          must give you the service or treatment you asked for. If you do not
+          agree with the decision, you can ask for a State Hearing as long as
+          you have not had a State Hearing on the same issue.
+        </p>
+        <p>
+          If you do not qualify for an IMR, your issue will be reviewed through
+          DMHC’s standard complaint process. You will receive a written notice
+          of the decision within 30 days. If you decide not to use the IMR
+          process, you may be giving up your rights under California law to
+          pursue legal action against
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon1&quot;</datafield
+            ></codeblock
+          >
+          about the service or treatment you are asking for.
+        </p>
+        <p class="head">How to ask for a State Hearing</p>
+        <p>
+          If the service was a Medi-Cal covered service or item, you can ask for
+          a State Hearing. You can <u>only</u> ask for a State Hearing after you
+          have appealed to our health plan and received a written decision with
+          which you disagree. Please note that if you have a State Hearing, you
+          will not be able to ask for an Independent Medical Review (IMR).
+        </p>
+        <p>
+          <span class="subHead">Step 1:</span> You or your representative must
+          ask for a State Hearing within <b>120 days</b> of the date of our
+          notice to you that the adverse benefit determination (Level 1 appeal
+          decision) has been upheld. Fill out the “Form to File a State Hearing”
+          that will be provided with your appeal decision notice. Make sure you
+          include all of the requested information.
+        </p>
+        <table style="width: 100%; border-collapse: collapse">
+          <tbody>
+            <tr>
+              <td style="width: 10%; vertical-align: top">
+                <span class="subHead">Step 2:</span>
+              </td>
+              <td>
+                Send your completed form to:<br />
+                <br />
+                California Department of Social Services<br />
+                State Hearings Division<br />
+                P.O. Box 944243, Mail Station 9-17-37<br />
+                Sacramento, CA 94244-2430<br />
+                FAX: 916-651-5210 or 916-651-2789
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          You can also request a State Hearing by calling 1-800-952-5253 (TTY:
+          1-800-952-8349). If you decide to make a request by phone, you should
+          be aware that the phone lines are very busy.
+        </p>
+        <p class="subHead">What happens next?</p>
+        <p>
+          The State will hold a hearing. You may attend the hearing in person or
+          by phone. You'll be asked to tell the State why you disagree with our
+          decision. You can ask a friend, relative, advocate, provider, or
+          lawyer to help you. You'll get a written decision that will explain if
+          you have additional appeal rights.
+        </p>
+        <p>
+          A copy of this notice has been sent to:<br />
+          <rawcodeblock contenteditable="false" style="background-color: yellow"
+            >&lt;% Response.Write(<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredFrom&quot;</datafield
+            >); <br />
+            if (!string.IsNullOrEmpty(<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredTo&quot;</datafield
+            >) &amp;&amp;
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredTo&quot;</datafield
+            >
+            !=
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredFrom&quot;</datafield
+            >) {<br />
+            Response.Write(&quot;&lt;br /&gt;&quot; +
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredTo&quot;</datafield
+            >); }<br />
+            if (string.IsNullOrEmpty(<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredTo&quot;</datafield
+            >)) {<br />
+            Response.Write(&quot;&lt;br /&gt;&quot; +
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_Facility&quot;</datafield
+            >
+            ); }<br />
+            if (!string.IsNullOrEmpty(<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Member_pcpname&quot;</datafield
+            >) &amp;&amp;
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Member_pcpname&quot;</datafield
+            >
+            !=
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredFrom&quot;</datafield
+            >
+            &amp;&amp;
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Member_pcpname&quot;</datafield
+            >
+            !=
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Auth_ReferredTo&quot;</datafield
+            >) {<br />
+            Response.Write(&quot;&lt;br /&gt;&quot; +
+            <datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;Member_pcpname&quot;</datafield
+            >); }%&gt;</rawcodeblock
+          >
+        </p>
+        <p class="subHead">Get help &amp; more information</p>
+        <ul>
+          <li style="margin-bottom: 15px">
+            Call
+            <b
+              ><codeblock
+                contenteditable="false"
+                style="background-color: yellow"
+                >=<datafield
+                  contenteditable="false"
+                  style="background-color: lightblue"
+                  >&quot;HealthPlan_Addon4&quot;</datafield
+                ></codeblock
+              ></b
+            >
+            at
+            <codeblock contenteditable="false" style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_Phone&quot;</datafield
+              ></codeblock
+            >&nbsp;(Los Angeles County)/<codeblock
+              contenteditable="false"
+              style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_Addon5&quot;</datafield
+              ></codeblock
+            >, from 8:00 a.m. to 8:00 p.m., Monday through Friday. After hours,
+            on weekends and on holidays, you can leave a message. Your call will
+            be returned within the next bussiness day. The call is free. TTY
+            users call&nbsp;<codeblock
+              contenteditable="false"
+              style="background-color: yellow"
+              >=<datafield
+                contenteditable="false"
+                style="background-color: lightblue"
+                >&quot;HealthPlan_TTY_or_TTD&quot;</datafield
+              ></codeblock
+            >. You can also visit our website at mmp.healthnetcalifornia.com.
+          </li>
+          <li style="margin-bottom: 15px">
+            Call the <b>California Department of Managed Health Care</b> for
+            free help in understanding your rights and information about the
+            complaint and Independent Medical Review (IMR) process at
+            1-888-466-2219.
+          </li>
+          <li style="margin-bottom: 15px">
+            Call the <b>Health Consumer Alliance</b> for free help with your
+            health care at 1-888-804-3536.
+          </li>
+          <li style="margin-bottom: 15px">
+            Call the <b>Cal MediConnect Ombuds Program</b> for free help. The
+            Cal MediConnect Ombuds Program helps people enrolled in Cal
+            MediConnect with service or billing problems. They can talk with you
+            about how to make an appeal and what to expect during the appeal
+            process. The phone number is 1-855-501-3077.
+          </li>
+          <li style="margin-bottom: 15px">
+            Call <b>Medicare</b> at 1-800-MEDICARE (1-800-633-4227), 24 hours a
+            day, 7 days a week. TTY users call: 1-877-486-2048.
+          </li>
+          <li style="margin-bottom: 15px">
+            Call the <b>Medicare Rights Center</b> at 1-800-333-4114.
+          </li>
+          <li style="margin-bottom: 15px">
+            Call the
+            <b>Health Insurance Counseling and Advocacy Program (HICAP)</b> for
+            free help. HICAP is an independent organization. It is not connected
+            with this plan. The phone number is 1-800-434-0222.
+          </li>
+          <li style="margin-bottom: 15px">
+            Talk to <b>your doctor or other provider</b>. Your doctor or other
+            provider can ask for a coverage decision or appeal on your behalf.
+          </li>
+          <li style="margin-bottom: 15px">
+            You can also see <b>Chapter 9 of the <i>Member Handbook</i></b> for
+            information about how to make an appeal.
+          </li>
+        </ul>
+        <hr />
+        <p>
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Name&quot;</datafield
+            ></codeblock
+          >
+          Community Solutions, Inc. is a health plan that contracts with both
+          Medicare and Medi-Cal to provide benefits of both programs to
+          enrollees.
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Name&quot;</datafield
+            ></codeblock
+          >
+          Community Solutions, Inc. is a subsidiary of
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Name&quot;</datafield
+            ></codeblock
+          >, LLC.
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Name&quot;</datafield
+            ></codeblock
+          >
+          is a registered service mark of
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Name&quot;</datafield
+            ></codeblock
+          >, LLC. All rights reserved.
+        </p>
+        <p>
+          ATTENTION: If you speak English, language assistance services, free of
+          charge, are available to you. Call
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Phone&quot;</datafield
+            ></codeblock
+          >
+          (Los Angeles)/<codeblock
+            contenteditable="false"
+            style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon5&quot;</datafield
+            ></codeblock
+          >
+          from 8:00 a.m. to 8:00 p.m., Monday through Friday. After hours, on
+          weekends and on holidays, you can leave a message. Your call will be
+          returned within the next business day. TTY users call
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_TTY_or_TTD&quot;</datafield
+            ></codeblock
+          >. The call is free.
+        </p>
+        <p>
+          You can get this document for free in other formats, such as large
+          print, braille, or audio. Call
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Phone&quot;</datafield
+            ></codeblock
+          >
+          (Los Angeles)/<codeblock
+            contenteditable="false"
+            style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_Addon5&quot;</datafield
+            ></codeblock
+          >
+          from 8:00 a.m. to 8:00 p.m., Monday through Friday. After hours, on
+          weekends and on holidays, you can leave a message. Your call will be
+          returned within the next business day. TTY users call
+          <codeblock contenteditable="false" style="background-color: yellow"
+            >=<datafield
+              contenteditable="false"
+              style="background-color: lightblue"
+              >&quot;HealthPlan_TTY_or_TTD&quot;</datafield
+            ></codeblock
+          >. The call is free.
+        </p>
+        <rawcodeblock contenteditable="false" style="background-color: yellow"
+          >&lt;%if(<datafield
+            contenteditable="false"
+            style="background-color: lightblue"
+            >&quot;LetterTo_name&quot;</datafield
+          >
+          == (<datafield
+            contenteditable="false"
+            style="background-color: lightblue"
+            >&quot;Member_firstname&quot;</datafield
+          >
+          + &quot; &quot; +<datafield
+            contenteditable="false"
+            style="background-color: lightblue"
+            >&quot;Member_lastname&quot;</datafield
+          >)) {%&gt;</rawcodeblock
+        >
+        <div>
+          <rawcodeblock contenteditable="false" style="background-color: yellow"
+            >&lt;!--#INCLUDE
+            FILE=&quot;scripts\HealthNet_CMC_ICEDenialCMC_LAP.aspx&quot;--&gt;</rawcodeblock
+          >
+        </div>
+        <div style="page-break-before: always">
+          <rawcodeblock contenteditable="false" style="background-color: yellow"
+            >&lt;!--#INCLUDE
+            FILE=&quot;scripts\HealthNet_CMC_ICEDenailCMC_NDL.aspx&quot;--&gt;</rawcodeblock
+          >
+        </div>
+        <div style="page-break-before: always">
+          <rawcodeblock contenteditable="false" style="background-color: yellow"
+            >&lt;!--#INCLUDE
+            FILE=&quot;scripts\HealthNet_CMC_ICEDenialCMC_IMRForms100.aspx&quot;--&gt;</rawcodeblock
+          >
+        </div>
+        <rawcodeblock contenteditable="false" style="background-color: yellow"
+          >&lt;%}%&gt;</rawcodeblock
+        >
+      </td>
+    </tr>
+  </tbody>
+  <!-- START table footer -->
+  <tfoot>
+    <!-- START row -->
+    <tr>
+      <!-- START column -->
+      <td>
+        <!-- START footer space -->
+        <div id="footer-space"><!-- LEAVE THIS BLANK --></div>
+      </td>
+    </tr>
+  </tfoot>
+  <!-- END content Table -->
+</table>
+<!-- START Footer -->
+<div id="footer">FooterContentGoesHere</div>
+<!-- START Footer Cover *First page only -->
+<div id="footer-cover"></div>
